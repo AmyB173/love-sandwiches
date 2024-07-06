@@ -128,11 +128,13 @@ def main():
     new_surplus_data = calculate_surplus_data(sales_data)
     print(new_surplus_data)
     update_worksheet(new_surplus_data, "surplus")
+    update_worksheet(stock_data, "stock")
 
 
 print("Welcome to Love Sandwiches Data Automation")
-# main()
+
 
 sales_columns = get_last_5_entries_sales()
 stock_data = calculate_stock_data(sales_columns)
-print(stock_data)
+
+main()
